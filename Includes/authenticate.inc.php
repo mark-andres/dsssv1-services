@@ -37,7 +37,6 @@ if (sha1($password . $salt) == $storedPwd) {
     } else {
         header("Location: $redirectName");
     }
-    exit ;
 } else {
     // if no match, prepare error message
     $error = 'Invalid username or password';
