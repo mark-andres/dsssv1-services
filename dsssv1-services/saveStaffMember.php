@@ -1,9 +1,7 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated'])) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
+
 $member = json_decode($_POST['obj']);
 $username = trim($member->username);
 $password = trim($member->password);

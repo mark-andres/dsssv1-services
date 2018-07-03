@@ -1,9 +1,6 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated'])) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
 
 require('../Includes/connection.inc.php');
 $conn = dbConnect('read');

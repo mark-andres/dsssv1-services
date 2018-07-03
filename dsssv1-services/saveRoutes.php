@@ -1,9 +1,6 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated']) || !isset($_POST) || !isset($_POST['routeUpdates'])) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
 
 function createRoute($conn, $driverId, $mapServiceRoute) {
     $stmt = $conn->stmt_init();

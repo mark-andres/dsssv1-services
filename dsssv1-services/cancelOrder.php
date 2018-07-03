@@ -1,9 +1,6 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated']) || !isset($_GET['orderId'])) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
 
 function updateOrder($conn, $orderId) {
     $orderStatus = 3;

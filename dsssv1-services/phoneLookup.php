@@ -1,9 +1,6 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated']) || !isset($_GET)) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
 
 if (isset($_GET['phone'])) {
     require('../Includes/connection.inc.php');

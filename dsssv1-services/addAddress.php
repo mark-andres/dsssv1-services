@@ -1,9 +1,6 @@
 <?php
 require('../Support/utils.php');
-startSession();
-if (!isset($_SESSION['authenticated']) || !isset($_POST)) {
-    exit ;   // fail silently
-}
+beginServiceFunction();
 
 $addressId = 0;
 $count = setVarsFromArray($_POST, array('str' => &$str, 'street' => &$street, 'streetNumber' => &$streetNumber, 'unit' => &$unit,
